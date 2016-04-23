@@ -1,0 +1,16 @@
+<%= bootstrap_form_for(@opportunity) do |f| %>
+
+<%= f.text_field :customer,                        label: '顧客名' %>
+<%= f.text_field :partner,                         label: 'パートナー名' %>
+<%= f.text_field :subject,                         label: '案件名' %>
+<%= f.text_area  :summary,                         label: '概要' %>
+<%= f.text_field :initial_cost,                    label: '初期費用' %>
+<%= f.text_field :monthly_cost,                    label: '月次費用' %>
+<%= f.text_field :expected_date_of_purchase_order, label: '受注予定日' %>
+<%= f.text_area  :schedule,                        label: 'スケジュール' %>
+<%= f.text_field :sales_staff,                     label: '営業担当' %>
+<%= f.text_field :technical_staff,                 label: '技術担当' %>
+<%= f.text_area  :remarks,                         label: '備考' %>
+
+<%= f.submit '登録', class: "btn btn-large btn-primary" %>
+<% end %>

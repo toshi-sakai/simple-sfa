@@ -1,0 +1,36 @@
+<%= link_to "編集", edit_opportunity_path, class: "btn btn-lg btn-primary" %>
+<hr class="featurette-divider">
+<h4>顧客名</h4>
+<p><%= @opportunity.customer %></p>
+<hr class="featurette-divider">
+<h4>パートナー名</h4>
+<p><%= @opportunity.partner %></p>
+<hr class="featurette-divider">
+<h4>案件名</h4>
+<p><%= @opportunity.subject %></p>
+<hr class="featurette-divider">
+<h4>概要</h4>
+<p><%= simple_format @opportunity.summary %></p>
+<hr class="featurette-divider">
+<h4>初期費用</h4>
+<p><%= @opportunity.initial_cost %></p>
+<hr class="featurette-divider">
+<h4>月次費用</h4>
+<p><%= @opportunity.monthly_cost %></p>
+<hr class="featurette-divider">
+<h4>受注予定日</h4>
+<p><%= @opportunity.expected_date_of_purchase_order %></p>
+<hr class="featurette-divider">
+<h4>スケジュール</h4>
+<p><%= simple_format @opportunity.schedule %></p>
+<hr class="featurette-divider">
+<h4>営業担当</h4>
+<p><%= @opportunity.sales_staff %></p>
+<hr class="featurette-divider">
+<h4>技術担当</h4>
+<p><%= @opportunity.technical_staff %></p>
+<hr class="featurette-divider">
+<h4>備考</h4>
+<p><%= simple_format @opportunity.remarks %></p>
+<hr class="featurette-divider">
+<%= link_to "削除", @opportunity, method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn btn-lg btn-danger" %>

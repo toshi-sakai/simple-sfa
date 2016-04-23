@@ -1,0 +1,28 @@
+<h1>商談一覧</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>顧客名</th>
+      <th>案件名</th>
+      <th>初期費用</th>
+      <th>月次費用</th>
+      <th>受注予定日</th>
+      <th>営業担当</th>
+      <th>技術担当</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @opportunities.each do |opportunity| %>
+    <tr>
+      <td><%= truncate opportunity.customer, :length => 15 %></td>
+      <td><%= link_to truncate(opportunity.subject, :length => 15), opportunity %></td>      
+      <td><%= opportunity.initial_cost %></td>      
+      <td><%= opportunity.monthly_cost %></td>      
+      <td><%= opportunity.expected_date_of_purchase_order %></td>      
+      <td><%= opportunity.sales_staff %></td>      
+      <td><%= opportunity.technical_staff %></td>      
+    </tr>
+  <% end %>
+  </tbody>
+</table>
