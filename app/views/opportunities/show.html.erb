@@ -13,10 +13,10 @@
 <p><%= simple_format @opportunity.summary %></p>
 <hr class="featurette-divider">
 <h4>初期費用</h4>
-<p><%= @opportunity.initial_cost %></p>
+<p><%= number_to_currency @opportunity.initial_cost, :unit => "￥", precision: 0 %></p>
 <hr class="featurette-divider">
 <h4>月次費用</h4>
-<p><%= @opportunity.monthly_cost %></p>
+<p><%= number_to_currency @opportunity.monthly_cost, :unit => "￥", precision: 0 %></p>
 <hr class="featurette-divider">
 <h4>受注予定日</h4>
 <p><%= @opportunity.expected_date_of_purchase_order %></p>

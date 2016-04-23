@@ -15,10 +15,10 @@
   <tbody>
   <% @opportunities.each do |opportunity| %>
     <tr>
-      <td><%= truncate opportunity.customer, :length => 15 %></td>
+      <td><%= truncate opportunity.customer, :length => 10 %></td>
       <td><%= link_to truncate(opportunity.subject, :length => 15), opportunity %></td>      
-      <td><%= opportunity.initial_cost %></td>      
-      <td><%= opportunity.monthly_cost %></td>      
+      <td><%= number_to_currency opportunity.initial_cost, :unit => "￥", precision: 0 %></td>      
+      <td><%= number_to_currency opportunity.monthly_cost, :unit => "￥", precision: 0 %></td>      
       <td><%= opportunity.expected_date_of_purchase_order %></td>      
       <td><%= opportunity.sales_staff %></td>      
       <td><%= opportunity.technical_staff %></td>      
